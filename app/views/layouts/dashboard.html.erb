@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Arc</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Page Content goes here -->
+      <% if notice.present? %>
+          <p class="notice"><%= notice %></p>
+      <% end %>
+
+      <% if alert.present? %>
+          <p class="alert"><%= alert %></p>
+      <% end %>
+
+      <% if user_signed_in? %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Login', new_user_session_path %>
+        <%= link_to 'Register', new_user_registration_path %>
+      <% end %>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>

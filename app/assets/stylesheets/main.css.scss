@@ -1,9 +1,71 @@
 body {
+  background-repeat: no-repeat;
+  font-family: $default-font;
+  font-size: $default-font-size;
+  backgorund-color: $default-bg-color;
+}
+
+.landing {
   background-image: url("bg.jpg");
+}
+
+.container {
   max-width: 1500px;
   max-height: 1000px;
-  background-repeat: no-repeat;
+}
 
-  font-family: "Helvetica Neue", Helvetica, Arial, Sans-Serif;
-  color: #2E2F30;
+.pull-right {
+  float: right;
+  display: block;
+}
+
+.pull-left {
+  float: left;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.box {
+  text-align: center;
+  padding: $default-padding;
+}
+
+.notice {
+  @extend .box;
+  color: $notice-color;
+}
+
+.alert {
+  @extend .box;
+  color: $alert-color;
+}
+
+.col {
+  display: inline-block;
+}
+
+.btn {
+  display: inline-block;
+  border: solid 1px;
+  border-radius: 2px;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+  text-transform: lowercase;
+  margin: 2px;
+  color: #fff;
+  background-color: #2E2F30;
+}
+
+textarea {
+  border: solid 1px;
+  padding: 5px;
+}
+
+.textarea-input {
+  width: 800px;
+  height: 200px;
 }
