@@ -76,6 +76,12 @@ GEM
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     i18n (0.8.4)
+    jasmine (2.6.0)
+      jasmine-core (>= 2.6.0, < 3.0.0)
+      phantomjs
+      rack (>= 1.2.1)
+      rake
+    jasmine-core (2.6.4)
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
@@ -99,6 +105,7 @@ GEM
       mini_portile2 (~> 2.2.0)
     orm_adapter (0.5.0)
     pg (0.21.0)
+    phantomjs (2.1.1.0)
     public_suffix (2.0.5)
     puma (3.9.1)
     rack (2.0.3)
@@ -190,6 +197,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   foreman
+  jasmine
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   pg (~> 0.18)
