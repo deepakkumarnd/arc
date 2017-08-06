@@ -4,4 +4,4 @@ Arc is a simple text processing interface, it uses uniq commands in the backend.
 
 ## Build Status
 
-https://travis-ci.org/kumarn33/arc
+[Travis Build](https://travis-ci.org/kumarn33/arc)
