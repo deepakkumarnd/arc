@@ -4,6 +4,8 @@ rvm:
 test:
   adapter: postgresql
   database: travis_ci_test
+script:
+  - RAILS_ENV=test bundle exec spring rake test
 before_script:
   - cp config/database.yml.travis config/database.yml
   - RAILS_ENV=test bundle exec rake db:create
