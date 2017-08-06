@@ -1,11 +1,13 @@
 class Api::V1::TextOperationsController < ApplicationController
 
   def run_commands
-    commands = run_commands_params[:commands]&.split('|')
+    commands = sanitized_commands
 
     # response =
     if commands.blank?
       response = { status: 'no_commands', message: 'No commands are provided.' }
+    elsif run_commands_params[:text].blank?
+      response = { status: 'empty_input', message: 'Input text is blank' }
     else
       begin
         result = TextProcessor::TextProcessor.new(commands,run_commands_params[:text]).process
@@ -24,5 +26,9 @@ class Api::V1::TextOperationsController < ApplicationController
 
   def run_commands_params
     params.permit(:commands, :text)
+  end
+
+  def sanitized_commands
+    run_commands_params[:commands]&.split('|')&.map(&:strip)&.select { |t| !t.blank? }
   end
 end

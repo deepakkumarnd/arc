@@ -8,7 +8,6 @@ Rails.application.routes.draw do
       resources :text_operations, only: [] do
         collection do
           post :run_commands
-          get :run_commands
         end
       end
     end

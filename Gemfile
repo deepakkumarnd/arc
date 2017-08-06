@@ -44,6 +44,7 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'jasmine'
   gem 'minitest-rails'
+  gem 'pry'
 end
 
 group :development do
