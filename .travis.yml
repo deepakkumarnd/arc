@@ -8,5 +8,5 @@ script:
   - RAILS_ENV=test bundle exec spring rake test
 before_script:
   - cp config/database.yml.travis config/database.yml
-  - RAILS_ENV=test bundle exec rake db:create
-  - RAILS_ENV=test bundle exec rake db:migrate
+  - RAILS_ENV=test bundle exec spring rake db:create
+  - RAILS_ENV=test bundle exec spring rake db:migrate
