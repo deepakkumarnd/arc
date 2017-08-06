@@ -1,24 +1,7 @@
-# README
+## Arc
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Arc is a simple text processing interface, it uses uniq commands in the backend. I am developing this for fun in my free time.
 
-Things you may want to cover:
+## Build Status
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+https://travis-ci.org/kumarn33/arc
