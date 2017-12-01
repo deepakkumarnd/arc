@@ -11,15 +11,18 @@ class ArcInputForm {
         this.commands = [];
         this.textarea = document.getElementById('arc-text-input');
         this.screen   = document.getElementById('arc-text-output');
+        this.active_commands = document.getElementById('arc-active-commands');
 
         let obj = this;
 
         $('.arc-action').on('click', (e) => {
             obj.addCommand(e.target.dataset.command);
+            obj.setActiveCommandsView()
         });
 
         $('#arc-clear').on('click', (e) => {
             obj.clearCommands();
+            obj.setActiveCommandsView();
         });
 
 
@@ -66,6 +69,10 @@ class ArcInputForm {
 
     set outputScreen(text) {
         this.screen.innerText = text;
+    }
+
+    setActiveCommandsView() {
+        this.active_commands.innerText = this.commands.join('|');
     }
 
     submitCallback(data) {
