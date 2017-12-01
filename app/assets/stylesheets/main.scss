@@ -1,0 +1,99 @@
+body {
+  background-repeat: no-repeat;
+  font-family: $default-font;
+  font-size: $default-font-size;
+  backgorund-color: $default-bg-color;
+}
+
+.landing {
+  background-image: url("bg.jpg");
+}
+
+.container {
+  max-width: 1500px;
+  max-height: 1000px;
+}
+
+.pull-right {
+  float: right;
+  display: block;
+}
+
+.pull-left {
+  float: left;
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.box {
+  text-align: center;
+  padding: $default-padding;
+}
+
+.notice {
+  @extend .box;
+  color: $notice-color;
+}
+
+.alert {
+  @extend .box;
+  color: $alert-color;
+}
+
+.col {
+  display: inline-block;
+  float: left;
+}
+
+.btn {
+  display: inline-block;
+  border: solid 1px;
+  border-radius: 2px;
+  padding: $default-padding;
+  text-align: center;
+  width: 100px;
+  text-transform: lowercase;
+  margin: 2px;
+  color: #fff;
+  background-color: #2E2F30;
+  text-transform: capitalize;
+
+  &:hover {
+    background: #fff;
+    color: #3a7999;
+    box-shadow: inset 0 0 0 $default-border-thickness $theme-color;
+    cursor: pointer;
+  }
+}
+
+textarea {
+  border: solid 1px;
+  padding: 5px;
+}
+
+.arc-input-section {
+  width: 800px;
+  padding: $default-padding;
+}
+
+.textarea-input {
+  width: 100%;
+  height: 200px;
+  outline: none;
+}
+
+.arc-output-section {
+  width: 500px;
+  height: 200px;
+  padding: $default-padding;
+  overflow: scroll;
+
+  #arc-text-output {
+    border: solid 1px;
+    width: 100%;
+    height: 100%;
+  }
+}
