@@ -1,26 +1,30 @@
 <div class="row">
   <div class="col">
     <div class="arc-input-section">
-      <form action="javascript:void(0);">
+      <form action="javascript:void(0);" id="arc-input-form">
+
         <textarea name="arc-text-input" id="arc-text-input" class="textarea-input"></textarea>
-        <div>
-          <a class="btn">Sort</a>
-          <a class="btn">Split</a>
-          <a class="btn">Uniq</a>
-          <a class="btn">Upper</a>
-          <a class="btn">Lower</a>
-          <a class="btn">Extract</a>
-          <a class="btn">Replace</a>
-          <a class="btn">Word Count</a>
-          <a class="btn">Char Count</a>
-          <a class="btn">Line Count</a>
+
+        <div class="arc-actions">
+          <a class="btn arc-action" data-command="sort">Sort</a>
+          <a class="btn arc-action" data-command="split">Split</a>
+          <a class="btn arc-action" data-command="uniq">Uniq</a>
+          <a class="btn arc-action" data-command="upper">Upper</a>
+          <a class="btn arc-action" data-command="lower">Lower</a>
+          <a class="btn arc-action">Extract</a>
+          <a class="btn arc-action">Replace</a>
+          <a class="btn arc-action">Word Count</a>
+          <a class="btn arc-action">Char Count</a>
+          <a class="btn arc-action">Line Count</a>
         </div>
+
+        <div><a class="btn" id="arc-submit">Submit</a></div>
       </form>
     </div>
   </div>
 
   <div class="col">
-    <div class="arc-text-output">
+    <div class="arc-output-section">
       <div name="text-output" id="arc-text-output" ></div>
     </div>
   </div>

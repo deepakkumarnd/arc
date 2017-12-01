@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery.min
 //= require turbolinks
 //= require cable
 //= require main
