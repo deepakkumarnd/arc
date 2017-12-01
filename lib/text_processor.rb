@@ -64,4 +64,27 @@ module TextProcessor
     end
   end
 
+  class CharCount < Command
+    def self.exec(text)
+      Open3.capture3('wc -c', stdin_data: text)[0].strip
+    end
+  end
+
+  class WordCount < Command
+    def self.exec(text)
+      Open3.capture3('wc -w', stdin_data: text)[0].strip
+    end
+  end
+
+  class LineCount < Command
+    def self.exec(text)
+
+      if text.length !=0
+        text = text + "\n"
+      end
+
+      Open3.capture3('wc -l', stdin_data: text)[0].strip
+    end
+  end
+
 end

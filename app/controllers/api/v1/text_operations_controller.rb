@@ -3,7 +3,6 @@ class Api::V1::TextOperationsController < ApplicationController
   def run_commands
     commands = sanitized_commands
 
-    # response =
     if commands.blank?
       response = { status: 'no_commands', message: 'No commands are provided.' }
     elsif run_commands_params[:text].blank?
