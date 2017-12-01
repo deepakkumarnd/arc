@@ -18,6 +18,11 @@ class ArcInputForm {
             obj.addCommand(e.target.dataset.command);
         });
 
+        $('#arc-clear').on('click', (e) => {
+            obj.clearCommands();
+        });
+
+
         $('#arc-submit').on('click', (e) => {
             let data = {
                 commands: obj.commandString,
@@ -30,8 +35,7 @@ class ArcInputForm {
                 data: data,
                 success: function(data){ obj.submitCallback(data) },
                 error: function (err) {
-                    console.log(err);
-                    alert("Unable to connect");
+                    console.log("Network error: Unable to connect");
                 },
                 dataType: 'json'
             });
@@ -46,6 +50,10 @@ class ArcInputForm {
         if (!this.commands.includes(cmd)) {
             this.commands.push(cmd);
         }
+    }
+
+    clearCommands() {
+        this.commands = [];
     }
 
     get inputText() {
@@ -70,7 +78,6 @@ class ArcInputForm {
         }
     }
 }
-
 
 $(document).ready( () => {
         new ArcInputForm();

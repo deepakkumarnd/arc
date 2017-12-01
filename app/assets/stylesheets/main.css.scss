@@ -45,19 +45,28 @@ body {
 
 .col {
   display: inline-block;
+  float: left;
 }
 
 .btn {
   display: inline-block;
   border: solid 1px;
   border-radius: 2px;
-  padding: 5px;
+  padding: $default-padding;
   text-align: center;
   width: 100px;
   text-transform: lowercase;
   margin: 2px;
   color: #fff;
   background-color: #2E2F30;
+  text-transform: capitalize;
+
+  &:hover {
+    background: #fff;
+    color: #3a7999;
+    box-shadow: inset 0 0 0 $default-border-thickness $theme-color;
+    cursor: pointer;
+  }
 }
 
 textarea {
@@ -65,12 +74,26 @@ textarea {
   padding: 5px;
 }
 
-.textarea-input {
+.arc-input-section {
   width: 800px;
+  padding: $default-padding;
+}
+
+.textarea-input {
+  width: 100%;
   height: 200px;
+  outline: none;
 }
 
 .arc-output-section {
-  width: 300px;
+  width: 500px;
   height: 200px;
+  padding: $default-padding;
+  overflow: scroll;
+
+  #arc-text-output {
+    border: solid 1px;
+    width: 100%;
+    height: 100%;
+  }
 }
